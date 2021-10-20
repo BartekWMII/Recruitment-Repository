@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: rgb(44, 104, 70);
+    overflow: hidden;
+}
+
+header{
+    height: 30px;
+    background-color: rgba(100, 119, 33, 0.966);
+    border-bottom: 2px solid black;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* squares under header */
+
+.square-left, .square-right{
+    height: 50px;
+    width: 50px;
+    margin-top: 70px;
+    margin-left: 20px;
+    background-color: rgb(250, 12, 12);
+    transform: rotate(45deg);
+    position: absolute;
+    border: 2px solid black;
+}
+
+.square-right{
+    margin-top: 20px;
+    margin-left: 70px; 
+}
+
+/* squares on the left section */
+
+.rectangle-top, .rectangle-bottom{
+    height: 10px;
+    width: 60px;
+    margin-top: 160px;
+    margin-left:10px;
+    background-color:rgba(41, 25, 187, 0.966);
+    position: absolute;
+    border: 2px solid black;
+}
+
+.rectangle-bottom{
+    margin-top: 190px;
+    margin-left:10px;
+}
+
+/* circle */
+
+.circle{
+    height: 50px;
+    width: 50px;
+    margin-top: 155px;
+    margin-left: 90px;
+    border-radius: 100%;
+    background-color: rgb(57, 124, 91);
+    transform: rotate(45deg);
+    position: absolute;
+    border: 2px solid black;
+}
+
+/* big rectangle with text */
+
+.big-rectangle{
+    height: 200px;
+    width: 90px;
+    margin-top: 215px;
+    margin-left: 35px;
+    font-size: 20px;
+    background-color:rgba(41, 25, 187, 0.966);
+    position: absolute;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+/* ---media---  */
+
+@media only screen and (max-width: 583px)
+{
+    .big-rectangle, .circle, .rectangle-bottom, .rectangle-top, .square-left, .square-right{
+        transition: all .4s ease-in-out;
+    }
+}
+
+@media only screen and (min-width: 583px)
+{
+    .circle, .rectangle-bottom, .rectangle-top, .big-rectangle{
+        transition: all .4s ease-in-out;
+    }
+    
+    .big-rectangle{
+        margin-top: 20px;
+        margin-left: 210px;
+        background-color: rgb(128, 41, 41);
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    
+    .big-rectangle, .rectangle-top, .rectangle-bottom, .circle{
+        transition: all .4s ease-in-out;
+    }
+
+    .big-rectangle{
+        margin-left: 400px;
+        background-color: rgb(252, 252, 252);
+    }
+
+    .rectangle-top, .rectangle-bottom{
+        margin-top: 50px;
+        margin-left: 200px;
+    }
+
+    .rectangle-bottom{
+        margin-top: 80px;
+    }
+
+    .circle{
+        margin-top: 45px;
+        margin-left: 280px;
+    }  
+}
